@@ -1,0 +1,188 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}
+Trang chủ - Học Tốt
+{% endblock %}
+{% block body_class %}home-page{% endblock %}
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero-section">
+
+    <div class="container hero-content text-center">
+
+        <span class="hero-badge">
+            Nền tảng tài liệu cho sinh viên
+        </span>
+
+        <h1>
+            Nơi sinh viên học tốt hơn
+        </h1>
+
+        <p>
+            Kết Bạn, Tìm Kiếm & Hỗ Trợ Trao Đổi
+        </p>
+
+        <div class="search-wrapper mx-auto">
+
+            <input type="text"
+                   class="form-control"
+                   placeholder="Tìm tài liệu, môn học, ngành học...">
+
+            <button class="btn">
+                Tìm kiếm
+            </button>
+
+        </div>
+
+        <div class="hero-actions">
+
+            <a href="#" class="btn btn-main">
+                Khám phá tài liệu
+            </a>
+
+            <a href="#" class="btn btn-outline-main">
+                Đăng tài liệu
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FEATURE SECTION -->
+<section class="feature-section">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+            <h2>Chức năng nổi bật</h2>
+            <p>
+                Các chức năng chính dành cho sinh viên trên hệ thống.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CARD -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h5>Tìm tài liệu</h5>
+
+                    <p>
+                        Tìm kiếm tài liệu theo môn học,
+                        ngành học hoặc từ khóa nhanh chóng.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h5>Xem preview</h5>
+
+                    <p>
+                        Xem trước nội dung tài liệu
+                        trước khi tải xuống hoặc mua.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                    </div>
+
+                    <h5>Đăng tài liệu</h5>
+
+                    <p>
+                        Chia sẻ tài liệu học tập của bạn
+                        cho cộng đồng sinh viên.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="icon-box">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+
+                    <h5>Trao đổi</h5>
+
+                    <p>
+                        Bình luận, nhắn tin và trao đổi
+                        trực tiếp với sinh viên khác.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DOCUMENT SECTION -->
+<section class="document-section">
+
+    <div class="container">
+
+        <div class="document-box">
+
+            <div>
+
+                <span class="small-title">
+                    Tài liệu nổi bật
+                </span>
+
+                <h3>
+                    Khám phá kho tài liệu
+                    được quan tâm nhiều nhất
+                </h3>
+
+                <p>
+                    Giáo trình, slide bài giảng,
+                    đề cương ôn tập,
+                    bài mẫu và nhiều tài liệu hữu ích khác.
+                </p>
+
+            </div>
+
+            <a href="#" class="btn btn-main">
+                Xem tất cả
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,1 @@
+console.log("Học Tốt loaded!");

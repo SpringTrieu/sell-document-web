@@ -1,0 +1,99 @@
+{% if request.endpoint == 'login' %}
+
+<nav class="simple-navbar">
+    <div class="container-fluid px-4">
+
+        <a class="navbar-brand fw-bold" href="/">
+            ✦ Học Tốt
+        </a>
+
+        <span class="simple-navbar-title">
+            Đăng nhập
+        </span>
+
+    </div>
+</nav>
+
+{% elif request.endpoint == 'register' %}
+
+<nav class="simple-navbar">
+    <div class="container-fluid px-4">
+
+        <a class="navbar-brand fw-bold" href="/">
+            ✦ Học Tốt
+        </a>
+
+        <span class="simple-navbar-title">
+            Đăng ký
+        </span>
+
+    </div>
+</nav>
+
+{% else %}
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+
+    <div class="container-fluid px-4">
+
+        <a class="navbar-brand fw-bold" href="/">
+            ✦ Học Tốt
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center"
+             id="mainNavbar">
+
+            <ul class="navbar-nav gap-lg-4">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Trang chủ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tài liệu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trao đổi</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Việc làm</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="d-none d-lg-flex align-items-center gap-2">
+
+            <a href="{{ url_for('login') }}"
+               class="btn btn-login">
+
+                Đăng nhập
+
+            </a>
+
+            <a href="{{ url_for('register') }}" class="btn btn-register">
+    Đăng ký
+</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+{% endif %}
