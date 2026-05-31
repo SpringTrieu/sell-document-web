@@ -1,0 +1,2288 @@
+[
+  {
+    "name": "ĐẠI HỌC Quốc gia Hà Nội",
+    "code": "VNU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Luật (ĐHQG Hà Nội)",
+    "code": "QHL",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Quốc tế (ĐHQG Hà Nội)",
+    "code": "QHQ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Dược (ĐHQG Hà Nội)",
+    "code": "QHY",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ (ĐHQG Hà Nội)",
+    "code": "QHI",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế (ĐHQG Hà Nội)",
+    "code": "QHE",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐH Giáo dục (ĐHQG Hà Nội)",
+    "code": "QHS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐH Khoa học Tự nhiên (ĐHQG Hà Nội)",
+    "code": "QHT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐH Khoa học Xã hội và Nhân văn (ĐHQG Hà Nội)",
+    "code": "QHX",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường Quản trị và kinh doanh (ĐHQG Hà Nội)",
+    "code": "QHD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Ngoại ngữ (ĐHQG Hà Nội)",
+    "code": "QHF",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Việt Nhật (ĐHQG Hà Nội)",
+    "code": "VJU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Âm nhạc Quốc gia Việt Nam",
+    "code": "NVH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Báo chí Tuyên truyền",
+    "code": "HBT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Chính sách và Phát triển",
+    "code": "HCP",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Công nghệ Bưu chính Viễn thông",
+    "code": "BVH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Hành chính Quốc gia",
+    "code": "HCH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Kỹ thuật Mật mã",
+    "code": "KMA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Ngân hàng",
+    "code": "NHH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Ngoại giao",
+    "code": "HQT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Nông nghiệp Việt Nam",
+    "code": "HVN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Phụ nữ Việt Nam",
+    "code": "HPN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Quản lý Giáo dục",
+    "code": "HVQ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Tài chính",
+    "code": "HTC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Thanh Thiếu niên Việt Nam",
+    "code": "HTN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Tòa án",
+    "code": "HTA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Y Dược học cổ truyền Việt Nam",
+    "code": "HYD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "ĐẠI HỌC Bách khoa Hà Nội",
+    "code": "BKA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công đoàn",
+    "code": "LDA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ Giao thông vận tải",
+    "code": "GTA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghiệp Dệt may Hà Nội",
+    "code": "CCM",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghiệp Hà Nội",
+    "code": "DCN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghiệp Việt Hung",
+    "code": "VHD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Đại Nam",
+    "code": "DDN",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Điện lực",
+    "code": "DDL",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Dược Hà Nội",
+    "code": "DKH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC FPT",
+    "code": "FPT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Giao thông vận tải",
+    "code": "GHA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hà Nội",
+    "code": "NHF",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hòa Bình",
+    "code": "ETU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Khoa học và Công nghệ Hà Nội",
+    "code": "KCN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kiểm sát Hà Nội",
+    "code": "DKS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kiến trúc Hà Nội",
+    "code": "KTA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế Kỹ thuật Công nghiệp",
+    "code": "DKK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "ĐẠI HỌC Kinh tế Quốc dân",
+    "code": "KHA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Lâm nghiệp",
+    "code": "LNH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Lao động Xã hội",
+    "code": "DLX",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Luật Hà Nội",
+    "code": "LPH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Mỏ Địa chất Hà Nội",
+    "code": "MDA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Mỹ thuật Công nghiệp",
+    "code": "MTC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Mỹ thuật Việt Nam",
+    "code": "MTH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Ngoại thương",
+    "code": "NTH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nguyễn Trãi",
+    "code": "NTU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sân khấu Điện ảnh",
+    "code": "SKD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Hà Nội",
+    "code": "SPH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Nghệ thuật Trung ương Hà Nội",
+    "code": "GNT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Thể dục thể thao Hà nội",
+    "code": "TDH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tài chính Ngân hàng Hà Nội",
+    "code": "FBU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tài nguyên và Môi trường Hà Nội",
+    "code": "DMT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thăng Long",
+    "code": "DTL",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thành Đô",
+    "code": "TDD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thủ đô Hà Nội",
+    "code": "HNM",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thương mại",
+    "code": "TMU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thủy lợi",
+    "code": "TLA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Văn hóa Hà Nội",
+    "code": "VHH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Xây dựng Hà Nội",
+    "code": "XDA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Hà Nội",
+    "code": "YHB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y tế Công cộng",
+    "code": "YTC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ và Quản lý Hữu nghị",
+    "code": "DCQ",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Đông Đô",
+    "code": "DDU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh doanh và Công nghệ Hà Nội",
+    "code": "DQK",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Phương Đông",
+    "code": "DPD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Mở Hà Nội",
+    "code": "MHN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "ĐẠI HỌC Phenikaa",
+    "code": "PKA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC CMC",
+    "code": "CMC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  
+  {
+    "name": "ĐẠI HỌC QUỐC GIA TP.HCM",
+    "code": "VNU-HCM",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sức khỏe - ĐHQG TP.HCM",
+    "code": "QSY",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Bách Khoa - ĐHQG TP.HCM",
+    "code": "QSB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ Thông tin - ĐH Quốc gia TP.HCM",
+    "code": "QSC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Khoa học Tự nhiên - ĐHQG TPHCM",
+    "code": "QST",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Khoa học xã hội và Nhân văn - ĐHQG TP.HCM",
+    "code": "QSX",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quốc tế - ĐH Quốc gia TP.HCM",
+    "code": "QSQ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế - Luật (ĐH Quốc gia TP.HCM)",
+    "code": "QSK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Cán bộ TP.HCM",
+    "code": "HVC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Công nghệ Bưu chính Viễn thông – Cơ sở TP.HCM",
+    "code": "BVS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Hàng không Việt Nam",
+    "code": "HHK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Nhạc viện TP.HCM",
+    "code": "NVS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công thương TP.HCM",
+    "code": "DCT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghiệp TP.HCM",
+    "code": "IUH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Giao thông vận tải - Cơ sở 2",
+    "code": "GSA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Giao thông vận tải TP.HCM",
+    "code": "GTS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hoa Sen",
+    "code": "HSU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kiến trúc TP.HCM",
+    "code": "KTS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế - Tài chính TP.HCM",
+    "code": "UEF",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "ĐẠI HỌC Kinh tế TP.HCM",
+    "code": "KSA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Lao động Xã hội – Cơ sở TP.HCM",
+    "code": "DLS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Luật TP.HCM",
+    "code": "LPS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Mở TP.HCM",
+    "code": "MBS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Mỹ thuật TP.HCM",
+    "code": "MTS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Ngân hàng TP.HCM",
+    "code": "NHS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Ngoại thương – Cơ sở phía Nam",
+    "code": "NTS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nguyễn Tất Thành",
+    "code": "NTT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nông Lâm TP.HCM",
+    "code": "NLS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quốc tế Hồng Bàng",
+    "code": "HIU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sài Gòn",
+    "code": "SGD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sân khấu Điện ảnh TP.HCM",
+    "code": "DSD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Kỹ thuật TP.HCM",
+    "code": "SPK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm TP.HCM",
+    "code": "SPS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tài chính - Marketing",
+    "code": "DMS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tài nguyên và Môi trường TP.HCM",
+    "code": "DTM",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thể dục Thể thao TP.HCM",
+    "code": "TDS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thủy lợi – Cơ sở 2",
+    "code": "TLS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tôn Đức Thắng",
+    "code": "DTT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Văn hóa TP.HCM",
+    "code": "VHS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Việt - Đức",
+    "code": "VGU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Dược TP.HCM",
+    "code": "YDS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y khoa Phạm Ngọc Thạch",
+    "code": "TYS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ Sài Gòn",
+    "code": "DSG",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Gia Định",
+    "code": "GDU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ TP.HCM",
+    "code": "DKC",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hùng Vương TPHCM",
+    "code": "DHV",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quốc tế Sài Gòn",
+    "code": "SIU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Văn Hiến",
+    "code": "DVH",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Văn Lang",
+    "code": "DVL",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm TDTT TP.HCM",
+    "code": "STS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Ngoại ngữ - Tin học TP.HCM",
+    "code": "DNT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quản lý và công nghệ TPHCM",
+    "code": "UMT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  
+  {
+    "name": "ĐẠI HỌC Thái Nguyên",
+    "code": "TNU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường Ngoại ngữ (ĐH Thái Nguyên)",
+    "code": "DTF",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Quốc tế (ĐH Thái Nguyên)",
+    "code": "DTQ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Phân hiệu ĐẠI HỌC Thái Nguyên tại Lào Cai",
+    "code": "DTP",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ TT và Truyền thông (ĐH Thái Nguyên)",
+    "code": "DTC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Khoa học (ĐH Thái Nguyên)",
+    "code": "DTZ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế - Quản trị kinh doanh (ĐH Thái Nguyên)",
+    "code": "DTE",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kỹ thuật Công nghiệp (ĐH Thái Nguyên)",
+    "code": "DTK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nông lâm (ĐH Thái Nguyên)",
+    "code": "DTN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm (ĐH Thái Nguyên)",
+    "code": "DTS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Dược (ĐH Thái Nguyên)",
+    "code": "DTY",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Chu Văn An",
+    "code": "DCA",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ Đông Á",
+    "code": "DDA",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghiệp Quảng Ninh",
+    "code": "DDM",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghiệp Việt Trì",
+    "code": "VUI",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quản lý và công nghệ Hải Phòng",
+    "code": "DHP",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Lương Thế Vinh",
+    "code": "DTV",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Điều dưỡng Nam Định",
+    "code": "YDD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hạ Long",
+    "code": "HLU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hải Dương",
+    "code": "DKT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hải Phòng",
+    "code": "THP",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hàng hải",
+    "code": "HHA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hoa Lư",
+    "code": "DNB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hồng Đức",
+    "code": "HDT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hùng Vương",
+    "code": "THV",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh Bắc",
+    "code": "UKB",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kỹ thuật Y tế Hải Dương",
+    "code": "DKY",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nông Lâm Bắc Giang",
+    "code": "DBG",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quốc tế Bắc Hà",
+    "code": "DBH",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sao Đỏ",
+    "code": "SDU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Hà Nội 2",
+    "code": "SP2",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Kỹ thuật Hưng Yên",
+    "code": "SKH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Kỹ thuật Nam Định",
+    "code": "SKN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tài chính - Quản trị kinh doanh",
+    "code": "DFA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tân Trào",
+    "code": "TQU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tây Bắc",
+    "code": "TTB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thái Bình",
+    "code": "DTB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thành Đông",
+    "code": "DDB",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thể dục Thể thao Bắc Ninh",
+    "code": "TDB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Trưng Vương",
+    "code": "DVP",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Văn hóa Thể thao và Du lịch Thanh Hóa",
+    "code": "DVD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Việt Bắc",
+    "code": "DVB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Dược Hải Phòng",
+    "code": "YPB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Dược Thái Bình",
+    "code": "YTB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y khoa Tokyo Việt Nam",
+    "code": "THU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  
+  {
+    "name": "ĐẠI HỌC Cần Thơ",
+    "code": "TAG",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Bà Rịa - Vũng Tàu",
+    "code": "BVU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Bạc Liêu",
+    "code": "DBL",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Bình Dương",
+    "code": "DBD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC An Giang (ĐHQG HCM)",
+    "code": "TCT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ Đồng Nai",
+    "code": "DCD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ Miền Đông",
+    "code": "MIT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Cửu Long",
+    "code": "DCL",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Lạc Hồng",
+    "code": "DLH",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Dầu khí Việt Nam",
+    "code": "PVU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Đồng Nai",
+    "code": "DNU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Đồng Tháp",
+    "code": "SPD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kiên Giang",
+    "code": "TKG",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế Công nghiệp Long An",
+    "code": "DLA",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế Kỹ thuật Bình Dương",
+    "code": "DKB",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kỹ thuật Công nghệ Cần Thơ",
+    "code": "KCC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Lâm nghiệp – Cơ sở 2",
+    "code": "LNS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nam Cần Thơ",
+    "code": "DNC",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quốc tế Miền Đông",
+    "code": "EIU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Kỹ thuật Vĩnh Long",
+    "code": "VLU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tân Tạo",
+    "code": "TTU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tây Đô",
+    "code": "DTD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thủ Dầu Một",
+    "code": "TDM",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tiền Giang",
+    "code": "TTG",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Trà Vinh",
+    "code": "DVT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Việt – Đức",
+    "code": "VGU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Võ Trường Toản",
+    "code": "VTT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Xây dựng Miền Tây",
+    "code": "MTU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Dược Cần Thơ",
+    "code": "YCT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  
+  {
+    "name": "ĐẠI HỌC HUẾ",
+    "code": "HueUni",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường Du lịch - ĐH Huế",
+    "code": "DHD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Giáo dục Thể chất - ĐH Huế",
+    "code": "DHC",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Khoa học - ĐH Huế",
+    "code": "DHT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế - ĐH Huế",
+    "code": "DHK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nông Lâm - ĐH Huế",
+    "code": "DHL",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nghệ thuật - ĐH Huế",
+    "code": "DHN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Luật - ĐH Huế",
+    "code": "DHA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Ngoại ngữ - ĐH Huế",
+    "code": "DHF",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm - ĐH Huế",
+    "code": "DHS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y Dược - ĐH Huế",
+    "code": "DHY",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Kỹ thuật và công nghệ - ĐH Huế",
+    "code": "DHE",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Quốc tế - ĐH Huế",
+    "code": "DHI",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Phân hiệu ĐH Huế tại quảng Trị",
+    "code": "DHQ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "ĐẠI HỌC ĐÀ NẴNG",
+    "code": "UDN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Giáo dục Thể chất – ĐH Đà Nẵng",
+    "code": "DDG",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Y Dược – ĐH Đà Nẵng",
+    "code": "DDY",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Phân hiệu ĐẠI HỌC Đà Nẵng tại Kon Tum",
+    "code": "DDP",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Bách Khoa - ĐH Đà Nẵng",
+    "code": "DDK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế - ĐH Đà Nẵng",
+    "code": "DDQ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Ngoại ngữ - ĐH Đà Nẵng",
+    "code": "DDF",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm - ĐH Đà nẵng",
+    "code": "DDS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Kỹ thuật – ĐH Đà Nẵng",
+    "code": "DSK",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Viện nghiên cứu đào tạo Việt - Anh - ĐH Đà Nẵng",
+    "code": "DDV",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Khoa Công nghệ thông tin và Truyền thông – ĐH Đà Nẵng",
+    "code": "VKU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kiến trúc Đà Nẵng",
+    "code": "KTD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y dược Buôn Ma Thuột",
+    "code": "BMU",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghệ Vạn Xuân",
+    "code": "DVX",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Công nghiệp Vinh",
+    "code": "DCV",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Đà Lạt",
+    "code": "TDL",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "ĐẠI HỌC Duy Tân",
+    "code": "DDT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Dân lập Phú Xuân",
+    "code": "DPX",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Yersin Đà Lạt",
+    "code": "DYD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Đông Á",
+    "code": "DAD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Hà Tĩnh",
+    "code": "HHT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Khánh Hòa",
+    "code": "UKH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kinh tế Nghệ An",
+    "code": "CEA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kỹ thuật Y Dược Đà Nẵng",
+    "code": "YDN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Âm nhạc Huế",
+    "code": "HVA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Nha Trang",
+    "code": "TSN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Phạm Văn Đồng",
+    "code": "DPQ",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Phan Châu Trinh",
+    "code": "DPC",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Phan Thiết",
+    "code": "DPT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Phú Yên",
+    "code": "DPY",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quảng Bình",
+    "code": "DQB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quảng Nam",
+    "code": "DQU",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quang Trung",
+    "code": "DQT",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Quy Nhơn",
+    "code": "DQN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Sư phạm Kỹ thuật Vinh",
+    "code": "SKV",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tài chính Kế toán",
+    "code": "UFA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Tây Nguyên",
+    "code": "TTN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thái Bình Dương",
+    "code": "TBD",
+    "province": [],
+    "type": [
+      2
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Thể dục Thể thao Đà Nẵng",
+    "code": "TTD",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Vinh",
+    "code": "TDV",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Xây dựng Miền Trung",
+    "code": "XDT",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Y khoa Vinh",
+    "code": "YKV",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  
+  {
+    "name": "HỌC VIỆN Biên phòng",
+    "code": "BPH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Hải Quân",
+    "code": "HQH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Hậu cần",
+    "code": "HEH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Khoa học Quân sự",
+    "code": "NQH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Kỹ thuật Quân sự",
+    "code": "KQH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Phòng không - Không quân",
+    "code": "PKH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Quân Y",
+    "code": "YQH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Chính trị (Trường SĨ QUAN Chính trị)",
+    "code": "LCH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Văn hóa - Nghệ thuật Quân đội",
+    "code": "ZNH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Công binh",
+    "code": "SNH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Đặc công",
+    "code": "DCH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN không quân",
+    "code": "KGH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Kỹ thuật QS Vinhempich (ĐH Trần Đại Nghĩa)",
+    "code": "VPH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Lục quân 1 (ĐH Trần Quốc Tuấn)",
+    "code": "LAH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Lục quân 2 (ĐH Nguyễn Huệ)",
+    "code": "LBH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Pháo binh",
+    "code": "PBH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Phòng Hóa",
+    "code": "HGH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Tăng - Thiết giáp",
+    "code": "TGH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường SĨ QUAN Thông tin",
+    "code": "TTH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  
+  {
+    "name": "HỌC VIỆN An ninh Nhân dân",
+    "code": "ANH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Cảnh sát Nhân dân",
+    "code": "CSH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "HỌC VIỆN Chính trị Công an Nhân dân",
+    "code": "HCA",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC An ninh nhân dân",
+    "code": "ANS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Cảnh sát nhân dân",
+    "code": "CSS",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kỹ thuật - Hậu cần Công an nhân dân phía Bắc",
+    "code": "HCB",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Kỹ thuật - Hậu cần Công an nhân dân phía Nam",
+    "code": "HCN",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Phòng cháy chữa cháy phía Bắc",
+    "code": "PCH",
+    "province": [],
+    "type": [
+      1
+    ]
+  },
+  {
+    "name": "Trường ĐẠI HỌC Phòng cháy chữa cháy phía Nam",
+    "code": "PCS",
+    "province": [],
+    "type": [
+      1
+    ]
+  }
+]

@@ -1,0 +1,88 @@
+.register-page {
+    padding: 28px 0;
+}
+
+.register-page .login-layout {
+    min-height: calc(100vh - 148px);
+    gap: 90px;
+}
+
+.register-page .login-hero {
+    max-width: 680px;
+    padding-left: 20px;
+}
+
+.register-page .login-hero h1 {
+    font-size: 52px;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    max-width: 620px;
+    margin-bottom: 18px;
+}
+
+.register-page .login-hero p {
+    max-width: 560px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.register-page .login-form-wrapper {
+    width: 470px;
+    margin-right: 40px;
+}
+
+.register-page .login-form-box {
+    padding: 34px 42px;
+    border-radius: 28px;
+}
+
+.register-page .login-form-box h2 {
+    font-size: 42px;
+}
+
+.register-page .login-subtitle {
+    margin-bottom: 22px;
+    font-size: 15px;
+}
+
+.register-page .form-group {
+    margin-bottom: 14px;
+}
+
+.register-page .form-group label {
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.register-page .form-group input {
+    height: 52px;
+    border-radius: 16px;
+}
+
+.register-page .login-btn {
+    height: 54px;
+    margin-top: 6px;
+}
+
+.register-page .register-text {
+    margin-top: 16px;
+}
+
+/*          */
+.form-message {
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-message.success {
+  background: #e7f8ef;
+  color: #137a3d;
+}
+
+.form-message.error {
+  background: #fdecec;
+  color: #c62828;
+}

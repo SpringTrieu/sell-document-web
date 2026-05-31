@@ -1,0 +1,168 @@
+.custom-navbar {
+    background: #ffffff;
+    position: relative;
+    z-index: 20;
+    padding: 10px 12px;
+    box-shadow: 0 1px 12px rgba(16, 44, 58, 0.06);
+}
+
+.home-page .custom-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    z-index: 30;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #101820;
+    text-decoration: none;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(16, 44, 58, 0.72);
+    transition: 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--dark-blue);
+}
+
+.custom-navbar .container-fluid {
+    display: flex;
+    align-items: center;
+}
+
+.custom-navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.custom-navbar a,
+.simple-navbar a {
+    text-decoration: none;
+}
+
+/* SIMPLE HEADER */
+
+.simple-navbar {
+    height: 92px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.simple-navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.simple-navbar-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #64748b;
+    position: relative;
+    top: 2px;
+}
+
+.simple-navbar-title::before {
+    content: "|";
+    margin-right: 18px;
+    color: #cbd5e1;
+}
+.user-dropdown {
+    position: relative;
+}
+
+.user-dropdown-trigger {
+    height: 46px;
+
+    padding: 0 18px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.14);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.user-dropdown-trigger:hover {
+    background: rgba(255,255,255,0.22);
+}
+
+.user-dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    right: 0;
+
+    width: 230px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 10px;
+
+    box-shadow:
+            0 14px 40px rgba(16, 44, 58, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: 0.22s ease;
+
+    z-index: 1000;
+}
+
+.user-dropdown:hover .user-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.user-dropdown-item {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    color: var(--dark-blue);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+    cursor: pointer;
+}
+
+.user-dropdown-item:hover {
+    background: var(--soft-blue);
+}
+
+.logout-btn {
+    border: none;
+    background: transparent;
+    text-align: left;
+}

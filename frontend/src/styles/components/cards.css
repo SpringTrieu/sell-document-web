@@ -1,0 +1,40 @@
+.feature-card {
+    height: 100%;
+    padding: 34px;
+    border-radius: 32px;
+    background: #ffffff;
+    border: 1px solid #e5f3f8;
+    box-shadow: 0 18px 50px rgba(8, 96, 120, 0.08);
+}
+
+.icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    background: var(--soft-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 26px;
+}
+
+.icon-box i {
+    font-size: 30px;
+    color: var(--main-blue);
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 70px rgba(8, 96, 120, 0.16);
+}
+
+.feature-card h5 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.feature-card p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin: 0;
+}
