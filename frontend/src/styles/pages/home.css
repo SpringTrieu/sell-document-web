@@ -18,32 +18,36 @@
     background-repeat: no-repeat;
 
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-page .hero-section {
     margin-top: 0;
-    padding-top: 120px;
 }
 
 .hero-content {
-    margin-top: 290px;
+    margin-top: 0;
+    width: 100%;
+    max-width: 900px;
 }
 
 .hero-content h1 {
     font-size: 82px;
-    line-height: 0.98;
-    letter-spacing: -4px;
-    font-weight: 900;
-    color: #10202a;
+    line-height: var(--line-height-heading-tight);
+    letter-spacing: var(--letter-spacing-heading-tight);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--text-heading);
     margin-bottom: 26px;
 }
 
 .hero-content p {
     max-width: 720px;
-    margin: 0 auto;
-    color: var(--text-gray);
+    margin: 0 auto 42px;
+    color: var(--text-body);
     font-size: 20px;
-    line-height: 1.8;
+    line-height: var(--line-height-body-relaxed);
 }
 
 .hero-badge {
@@ -55,16 +59,9 @@
     background: rgba(255,255,255,0.68);
     backdrop-filter: blur(12px);
     color: var(--main-blue);
-    font-weight: 700;
+    font-weight: var(--font-weight-semibold);
     font-size: 14px;
     margin-bottom: 26px;
-}
-
-.hero-actions {
-    margin-top: 34px;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
 }
 
 .feature-section {
@@ -76,14 +73,15 @@
 }
 .section-title h2 {
     font-size: 52px;
-    font-weight: 900;
-    letter-spacing: -2px;
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--letter-spacing-heading);
     margin-bottom: 14px;
 }
 
 .section-title p {
-    color: var(--text-gray);
+    color: var(--text-body);
     font-size: 18px;
+    line-height: var(--line-height-body);
     margin-bottom: 56px;
 }
 
@@ -101,19 +99,19 @@
 .small-title {
     color: var(--main-blue);
     font-size: 14px;
-    font-weight: 800;
+    font-weight: var(--font-weight-semibold);
 }
 
 .document-box h3 {
     font-size: 38px;
-    font-weight: 900;
-    letter-spacing: -1px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-heading-snug);
     margin: 14px 0;
 }
 
 .document-box p {
-    color: var(--text-gray);
+    color: var(--text-body);
     max-width: 700px;
-    line-height: 1.8;
+    line-height: var(--line-height-body-relaxed);
     margin: 0;
 }

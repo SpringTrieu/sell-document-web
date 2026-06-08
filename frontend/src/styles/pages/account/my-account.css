@@ -47,8 +47,10 @@
 
 .account-user-box h3 {
   margin: 0;
-  color: var(--dark-blue);
+  color: var(--text-heading);
   font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-heading-snug);
 }
 
 .account-user-box p {
@@ -67,7 +69,7 @@
 .account-menu a {
   padding: 12px 14px;
   border-radius: 14px;
-  color: var(--dark-blue);
+  color: var(--text-heading);
   text-decoration: none;
   cursor: pointer;
   font-weight: 500;
@@ -92,8 +94,10 @@
 
 .account-card-header h2 {
   margin: 0;
-  color: var(--dark-blue);
+  color: var(--text-heading);
   font-size: 28px;
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing-heading);
 }
 
 .account-card-header p {
@@ -133,8 +137,8 @@
 }
 
 .form-group label {
-  font-weight: 600;
-  color: var(--dark-blue);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-body-emphasis);
 }
 
 .form-group input,
@@ -144,7 +148,7 @@
   border-radius: 14px;
   padding: 12px 14px;
   outline: none;
-  color: var(--dark-blue);
+  color: var(--text-heading);
   background: #fff;
 }
 
@@ -199,8 +203,9 @@
 
 .sidebar-title {
   font-size: 18px;
-  font-weight: 800;
-  color: var(--dark-blue);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing-heading-snug);
+  color: var(--text-heading);
   margin-bottom: 24px;
 }
 
@@ -227,7 +232,8 @@
 
 .account-user-box h3 {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-heading-snug);
 }
 
 .account-user-box p {
@@ -266,7 +272,7 @@
 .account-menu a strong {
   display: block;
   font-size: 15px;
-  color: var(--dark-blue);
+  color: var(--text-heading);
 }
 
 .account-menu a p {
@@ -508,20 +514,23 @@
 .account-page-header h2 {
   margin: 0;
   font-size: 30px;
-  font-weight: 800;
-  color: var(--dark-blue);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--text-heading);
 }
 
 .account-page-header p {
   margin: 8px 0 0;
-  color: var(--text-gray);
+  color: var(--text-body);
+  line-height: var(--line-height-body);
 }
 
 .account-section-title h3 {
   margin: 0 0 22px;
   font-size: 18px;
-  font-weight: 800;
-  color: var(--dark-blue);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-heading-snug);
+  color: var(--text-heading);
 }
 
 .profile-actions {

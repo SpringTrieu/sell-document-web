@@ -1,0 +1,74 @@
+/*
+ * Global typography — Clean UI (Stripe / Vercel style)
+ * Headings: max weight 800, negative letter-spacing, dark slate (not #000)
+ * Body: weight 400–500, line-height 1.5–1.7, softer gray
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+h1 {
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--letter-spacing-heading-tight);
+    line-height: var(--line-height-heading-tight);
+}
+
+h2 {
+    letter-spacing: var(--letter-spacing-heading);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: var(--letter-spacing-heading-snug);
+}
+
+p,
+li,
+dd,
+blockquote {
+    color: var(--text-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+}
+
+small,
+.text-muted {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+}
+
+strong,
+b {
+    color: var(--text-body-emphasis);
+    font-weight: var(--font-weight-medium);
+}
+
+label {
+    color: var(--text-body-emphasis);
+    font-weight: var(--font-weight-medium);
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: var(--text-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+}

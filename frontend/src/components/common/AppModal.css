@@ -66,21 +66,16 @@
 
 .app-modal-box h3 {
     font-size: 30px;
-    font-weight: 800;
-
-    color: var(--dark-blue);
-
+    font-weight: var(--font-weight-extrabold);
+    color: var(--text-heading);
     margin-bottom: 14px;
-
-    letter-spacing: -1px;
+    letter-spacing: var(--letter-spacing-heading-snug);
 }
 
 .app-modal-box p {
-    color: var(--text-gray);
-
+    color: var(--text-body);
     font-size: 15px;
-    line-height: 1.75;
-
+    line-height: var(--line-height-body-relaxed);
     margin-bottom: 30px;
 }
 
@@ -98,7 +93,7 @@
     color: white;
 
     font-size: 16px;
-    font-weight: 800;
+    font-weight: var(--font-weight-semibold);
 
     transition: 0.25s ease;
 

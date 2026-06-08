@@ -29,12 +29,13 @@
 
 .feature-card h5 {
     font-size: 24px;
-    font-weight: 800;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-heading-snug);
     margin-bottom: 14px;
 }
 
 .feature-card p {
-    color: var(--text-gray);
-    line-height: 1.8;
+    color: var(--text-body);
+    line-height: var(--line-height-body-relaxed);
     margin: 0;
 }

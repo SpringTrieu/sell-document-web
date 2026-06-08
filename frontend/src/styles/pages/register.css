@@ -14,8 +14,8 @@
 
 .register-page .login-hero h1 {
     font-size: 52px;
-    line-height: 1.08;
-    letter-spacing: -2px;
+    line-height: var(--line-height-heading-tight);
+    letter-spacing: var(--letter-spacing-heading);
     max-width: 620px;
     margin-bottom: 18px;
 }
@@ -23,7 +23,7 @@
 .register-page .login-hero p {
     max-width: 560px;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: var(--line-height-body);
 }
 
 .register-page .login-form-wrapper {
@@ -74,7 +74,7 @@
   padding: 10px 12px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .form-message.success {

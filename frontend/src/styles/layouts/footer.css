@@ -28,14 +28,14 @@
 .footer-menu h6,
 .footer-menu a,
 .footer-bottom span {
-    font-family: "Anton", sans-serif;
     letter-spacing: 0.5px;
 }
 
 .footer-menu h6 {
     color: white;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--letter-spacing-heading-snug);
     margin-bottom: 18px;
 }
 
@@ -44,7 +44,8 @@
     text-decoration: none;
     color: rgba(255,255,255,0.78);
     font-size: 15px;
-    line-height: 1.8;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body-relaxed);
     margin-bottom: 12px;
     transition: 0.25s ease;
 }
@@ -61,7 +62,7 @@
     align-items: center;
     color: rgba(255,255,255,0.68);
     font-size: 13px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 @media (max-width: 768px) {
     .site-footer {

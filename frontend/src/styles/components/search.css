@@ -30,7 +30,7 @@
     border-radius: 999px;
 }
 .search-wrapper input::placeholder {
-    color: #8b979c;
+    color: var(--text-muted);
 }
 
 .search-wrapper button:hover {

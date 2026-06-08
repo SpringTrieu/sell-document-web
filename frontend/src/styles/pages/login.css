@@ -29,16 +29,17 @@
 
 .login-hero h1 {
     font-size: 72px;
-    line-height: 0.95;
-    letter-spacing: -3px;
-    font-weight: 900;
+    line-height: var(--line-height-heading-tight);
+    letter-spacing: var(--letter-spacing-heading-tight);
+    font-weight: var(--font-weight-extrabold);
     margin-bottom: 28px;
 }
 
 .login-hero p {
     font-size: 20px;
-    line-height: 1.8;
+    line-height: var(--line-height-body-relaxed);
     color: rgba(255,255,255,0.86);
+    font-weight: var(--font-weight-regular);
 }
 
 .login-form-wrapper {
@@ -55,15 +56,17 @@
 
 .login-form-box h2 {
     font-size: 42px;
-    font-weight: 900;
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--letter-spacing-heading);
     margin-bottom: 10px;
-    color: #102c3a;
+    color: var(--text-heading);
 }
 
 .login-subtitle {
-    color: #6f7c82;
+    color: var(--text-muted);
     margin-bottom: 34px;
     font-size: 16px;
+    line-height: var(--line-height-body);
 }
 
 .form-group {
@@ -74,8 +77,8 @@
     display: block;
     margin-bottom: 10px;
     font-size: 15px;
-    font-weight: 700;
-    color: #102c3a;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-body-emphasis);
 }
 
 .form-group input {
@@ -108,13 +111,14 @@
 .register-text a {
     text-decoration: none;
     color: #1197c0;
-    font-weight: 700;
+    font-weight: var(--font-weight-semibold);
 }
 
 .register-text {
     text-align: center;
     margin-top: 24px;
-    color: #6f7c82;
+    color: var(--text-muted);
+    line-height: var(--line-height-body);
 }
 @media (max-width: 992px) {
     .login-layout {

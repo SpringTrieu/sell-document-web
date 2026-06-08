@@ -1,275 +1,465 @@
-.custom-navbar {
-    background: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 6px 12px;
-    box-shadow: 0 1px 12px rgba(16, 44, 58, 0.06);
+/* ========================================
+   FLOATING NAVBAR - MAIN
+   ======================================== */
+
+.floating-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+  padding: 16px 20px;
+  pointer-events: none;
 }
 
-.home-page .custom-navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: transparent;
-    box-shadow: none;
-    z-index: 30;
+.floating-navbar-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  pointer-events: auto;
 }
 
-.navbar-brand {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #101820;
-    text-decoration: none;
+.floating-navbar-container {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  padding: 12px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-navbar-container:hover {
+  background: rgba(255, 255, 255, 0.80);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navbar-logo:hover {
+  color: #1e293b;
+}
+
+/* Menu */
+.navbar-menu {
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-link {
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(16, 44, 58, 0.72);
-    transition: 0.25s ease;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 8px 0;
 }
 
-.nav-link:hover,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0f172a;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #0f172a;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
 .nav-link.active {
-    color: var(--dark-blue);
+  color: #0f172a;
+  font-weight: 600;
 }
 
-.custom-navbar .container-fluid {
-    display: flex;
-    align-items: center;
+.nav-link.active::after {
+  width: 100%;
 }
 
-.custom-navbar .navbar-nav {
-    display: flex;
-    align-items: center;
+/* Actions */
+.navbar-actions {
+  flex-shrink: 0;
 }
 
-.custom-navbar a,
-.simple-navbar a {
-    text-decoration: none;
+/* Login Button */
+.btn-login {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 
-/* SIMPLE HEADER */
-
-.simple-navbar {
-    height: 92px;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #edf2f7;
+.btn-login:hover {
+  color: #0f172a;
 }
 
-.simple-navbar .container-fluid {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+/* Register Button - Pill Shape */
+.btn-register {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: #0f172a;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  border: 2px solid #0f172a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.simple-navbar-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #64748b;
-    position: relative;
-    top: 2px;
+.btn-register:hover {
+  background: white;
+  color: #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 
-.simple-navbar-title::before {
-    content: "|";
-    margin-right: 18px;
-    color: #cbd5e1;
-}
-.user-dropdown {
-    position: relative;
-}
+/* ========================================
+   SIMPLE HEADER - LOGIN/REGISTER
+   ======================================== */
 
-.user-dropdown-trigger {
-    height: 46px;
-
-    padding: 0 18px;
-
-    border-radius: 999px;
-
-    background: rgba(255,255,255,0.14);
-
-    color: white;
-
-    display: flex;
-    align-items: center;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: 0.25s ease;
+.simple-header {
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
 }
 
-.user-dropdown-trigger:hover {
-    background: rgba(255,255,255,0.22);
+.simple-header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.user-dropdown-menu {
-    position: absolute;
-
-    top: calc(100% + 12px);
-    right: 0;
-
-    width: 230px;
-
-    background: white;
-
-    border-radius: 18px;
-
-    padding: 10px;
-
-    box-shadow:
-            0 14px 40px rgba(16, 44, 58, 0.12);
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-
-    transition: 0.22s ease;
-
-    z-index: 1000;
+.simple-header-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #94a3b8;
+  position: relative;
+  padding-left: 16px;
 }
 
-.user-dropdown:hover .user-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.simple-header-title::before {
+  content: "|";
+  position: absolute;
+  left: 0;
+  color: #cbd5e1;
+  font-weight: 300;
 }
 
-.user-dropdown-item {
+/* ========================================
+   ACCOUNT HEADER
+   ======================================== */
+
+.account-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 20px;
+  margin-top: 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.account-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.account-search-bar {
+  flex: 1;
+  max-width: 500px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.account-search-bar:focus-within {
+  background: white;
+  border-color: #cbd5e1;
+}
+
+.account-search-bar i {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.account-search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.account-search-bar input::placeholder {
+  color: #94a3b8;
+}
+
+.account-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Icon Button */
+.icon-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.badge-notification {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+/* ========================================
+   USER MENU DROPDOWN
+   ======================================== */
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-trigger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.user-menu-trigger:hover {
+  color: #0f172a;
+}
+
+/* For account header user menu */
+.account-header .user-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.account-header .user-menu-trigger img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-info strong {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.user-info span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.account-header .user-menu-trigger i {
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+.user-menu-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.user-menu:hover .user-menu-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #475569;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.logout-item {
+  color: #ef4444;
+}
+
+.logout-item:hover {
+  background: #fee2e2;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 992px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .floating-navbar-container {
+    padding: 10px 18px;
+  }
+
+  .navbar-logo {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .floating-navbar {
+    padding: 10px 12px;
+  }
+
+  .floating-navbar-wrapper {
+    padding: 0 12px;
+  }
+
+  .floating-navbar-container {
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem;
+    flex: 1 0 auto;
+  }
+
+  .navbar-actions {
+    flex: 1 0 100%;
+    justify-content: flex-start;
+  }
+
+  .btn-register {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .btn-login {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .account-header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .account-search-bar {
     width: 100%;
+    height: 36px;
+  }
 
-    padding: 14px 16px;
-
-    border-radius: 12px;
-
-    color: var(--dark-blue);
-
-    font-size: 15px;
-    font-weight: 600;
-
-    transition: 0.2s ease;
-
-    cursor: pointer;
-}
-
-.user-dropdown-item:hover {
-    background: var(--soft-blue);
-}
-
-.logout-btn {
-    border: none;
-    background: transparent;
-    text-align: left;
-}
-.user-dropdown-item {
-    display: block;
-}
-.custom-navbar {
-  padding: 6px 12px;
-}
-
-.navbar-brand {
-  font-size: 1.65rem;
-}
-.account-header-search {
-    width: 620px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 0 14px;
-
-    border: 1px solid #e5eaf2;
-    border-radius: 12px;
-
-    background: #fafbfc;
-}
-
-.account-header-search i {
-    color: #94a3b8;
-}
-
-.account-header-search input {
-    flex: 1;
-
-    border: none;
-    outline: none;
-
-    background: transparent;
-}
-
-.account-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.header-icon-btn {
-    position: relative;
-
-    border: none;
-    background: transparent;
-
-    font-size: 22px;
-
-    color: #64748b;
-}
-
-.notification-badge {
-    position: absolute;
-
-    top: -4px;
-    right: -4px;
-
-    width: 18px;
-    height: 18px;
-
-    border-radius: 50%;
-
-    background: #ef4444;
-    color: white;
-
-    font-size: 11px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.account-user-mini {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    cursor: pointer;
-}
-
-.account-user-mini img {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.account-user-mini strong {
-    display: block;
-    font-size: 14px;
-}
-
-.account-user-mini p {
-    margin: 0;
-    font-size: 12px;
-    color: #64748b;
+  .account-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

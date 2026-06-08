@@ -1,9 +1,14 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+html {
+    font-family: var(--font-family-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 html,
@@ -12,6 +17,18 @@ body {
 }
 
 body {
-    background: #ffffff;
-    color: var(--dark-blue);
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    background: var(--white);
+    color: var(--text-body);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
 }

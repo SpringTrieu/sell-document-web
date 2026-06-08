@@ -22,16 +22,6 @@ function HomePage() {
               Tìm kiếm
             </button>
           </div>
-
-          <div className="hero-actions">
-            <Link to="/documents" className="btn btn-main">
-              Khám phá tài liệu
-            </Link>
-
-            <Link to="/documents/upload" className="btn btn-outline-main">
-              Đăng tài liệu
-            </Link>
-          </div>
         </div>
       </section>
 

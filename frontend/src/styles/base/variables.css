@@ -1,7 +1,43 @@
 :root {
+    /* Brand */
     --main-blue: #1197c0;
     --dark-blue: #102c3a;
     --soft-blue: #eef9fd;
-    --text-gray: #6f7c82;
     --white: #ffffff;
+
+    /* Typography — font stack */
+    --font-family-fallback: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+    --font-family-base: "Inter", var(--font-family-fallback);
+
+    /* Typography — colors (no pure black) */
+    --text-heading: #0f172a;
+    --text-body: #4b5563;
+    --text-body-emphasis: #374151;
+    --text-muted: #6b7280;
+    --text-gray: var(--text-body);
+
+    /* Typography — weights (max 800 for headings) */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Typography — line heights */
+    --line-height-body: 1.6;
+    --line-height-body-relaxed: 1.7;
+    --line-height-heading: 1.15;
+    --line-height-heading-tight: 1.05;
+
+    /* Typography — letter spacing (negative tracking for headings) */
+    --letter-spacing-heading-tight: -0.04em;
+    --letter-spacing-heading: -0.03em;
+    --letter-spacing-heading-snug: -0.02em;
+
+    /* Bootstrap integration */
+    --bs-font-sans-serif: var(--font-family-base);
+    --bs-body-font-family: var(--font-family-base);
+    --bs-body-color: var(--text-body);
+    --bs-heading-color: var(--text-heading);
 }
