@@ -1,3 +1,16 @@
-# Default ignored files
+# IDE & Editor configs
+.idea/
 /shelf/
 /workspace.xml
+.vscode/
+
+# Node / JavaScript dependencies & builds
+node_modules/
+dist/
+build/
+
+# Python virtual environments & cache
+venv/
+.venv/
+__pycache__/
+*.pyc
