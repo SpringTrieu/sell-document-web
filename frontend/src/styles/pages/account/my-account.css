@@ -1,9 +1,15 @@
 /* ── Page shell ─────────────────────────────────────────────── */
 
+:root {
+  /* Chiều cao account-header: padding 12*2 + content 40 + border 1 */
+  --account-header-h: 65px;
+}
+
 .my-account-page {
-  min-height: calc(100vh - 72px);
+  min-height: calc(100vh - var(--account-header-h));
   background: #f8fafc;
-  padding: 24px clamp(16px, 3vw, 32px);
+  /* Xóa padding-top để sidebar dính sát header */
+  padding: 0 clamp(16px, 3vw, 32px) 24px;
 }
 
 .my-account-layout {
@@ -19,23 +25,33 @@
 
 .my-account-sidebar {
   position: sticky;
-  top: 88px;
+  /* Dính ngay sát dưới account-header */
+  top: var(--account-header-h);
+  max-height: calc(100vh - var(--account-header-h));
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 0;
   background: var(--white);
-  border-radius: 16px;
+  /* Chỉ bo góc dưới, góc trên liền mạch với header */
+  border-radius: 0 0 16px 16px;
   padding: 0;
-  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
-  overflow: hidden;
+  box-shadow: 2px 0 16px rgba(15, 23, 42, 0.05);
+  scrollbar-width: none;
+}
+
+.my-account-sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar-user {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 20px 16px 16px;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 16px 14px;
+  /* Dùng gradient mỏng thay border cứng — tinh tế hơn */
+  background: linear-gradient(to bottom, var(--white) 80%, #f8fafc 100%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
 }
 
 .sidebar-user__avatar {
@@ -59,8 +75,8 @@
 }
 
 .sidebar-user__username {
-  margin: 2px 0 6px;
-  font-size: 13px;
+  margin: 2px 0 5px;
+  font-size: 12.5px;
   color: var(--text-muted);
 }
 
@@ -79,8 +95,9 @@
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 8px 8px;
+  gap: 2px;
+  /* padding-top nhỏ hơn để menu dính sát phần User */
+  padding: 6px 8px 8px;
 }
 
 .sidebar-nav__item {
@@ -235,6 +252,8 @@
 
 .my-account-main {
   min-width: 0;
+  /* Thêm padding-top để content có khoảng cách với header */
+  padding-top: 24px;
 }
 
 .my-account-header {
@@ -371,6 +390,12 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* Row đặc biệt: startYear + endYear + checkbox Đã tốt nghiệp */
+.form-row--year-grad {
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end; /* căn đáy — checkbox thẳng hàng với input */
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -442,6 +467,36 @@
 
 .form-field--checkbox {
   justify-content: flex-end;
+}
+
+/* Checkbox trong row year-grad: container tinh tế */
+.form-row--year-grad .form-field--checkbox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  justify-content: center;
+  min-width: 148px;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.form-row--year-grad .form-field--checkbox:has(input:checked) {
+  background: var(--soft-blue);
+  border-color: var(--main-blue);
+}
+
+.form-row--year-grad .form-field--checkbox .form-field__label {
+  /* Ẩn label text "Đã tốt nghiệp" vì checkbox-label đã có chữ */
+  display: none;
+}
+
+.form-row--year-grad .checkbox-label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-heading);
+  padding-top: 0;
+  gap: 7px;
 }
 
 .checkbox-label {
@@ -644,6 +699,8 @@
 
   .my-account-sidebar {
     position: static;
+    border-radius: 16px;
+    max-height: none;
   }
 
   .profile-section {

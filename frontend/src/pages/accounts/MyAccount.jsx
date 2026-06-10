@@ -135,7 +135,7 @@ function MyAccount() {
                   </div>
 
                   {/* Row 4: startYear + endYear + isGraduated */}
-                  <div className="form-row form-row--3">
+                  <div className="form-row form-row--year-grad">
                     <div className="form-field">
                       <label className="form-field__label" htmlFor="startYear">Năm bắt đầu học</label>
                       <input id="startYear" name="startYear" type="number" className="form-field__input" placeholder="VD: 2021" />
