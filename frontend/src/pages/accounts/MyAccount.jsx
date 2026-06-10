@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import "../../styles/pages/account/my-account.css";
@@ -76,6 +76,36 @@ const PROFILE_BENEFITS = [
   "Hỗ trợ xác minh tài khoản nhanh hơn",
 ];
 
+const UNIVERSITY_OPTIONS = [
+  { value: "", label: "Chọn trường" },
+  { value: "hust", label: "Đại học Bách Khoa Hà Nội" },
+  { value: "hmu", label: "Đại học Y Hà Nội" },
+  { value: "vnu", label: "Đại học Quốc gia Hà Nội" },
+];
+
+const FACULTY_OPTIONS = [
+  { value: "", label: "Chọn khoa" },
+  { value: "it", label: "Công nghệ thông tin" },
+  { value: "business", label: "Kinh tế" },
+  { value: "engineering", label: "Kỹ thuật" },
+];
+
+const MAJOR_OPTIONS = [
+  { value: "", label: "Chọn ngành" },
+  { value: "cs", label: "Khoa học máy tính" },
+  { value: "se", label: "Kỹ thuật phần mềm" },
+  { value: "is", label: "Hệ thống thông tin" },
+];
+
+function generateYearOptions() {
+  const currentYear = new Date().getFullYear();
+  const years = [];
+  for (let year = currentYear - 10; year <= currentYear + 6; year += 1) {
+    years.push(year);
+  }
+  return years;
+}
+
 function getRoleLabel(role) {
   const roleMap = {
     student: "Sinh viên",
@@ -86,16 +116,111 @@ function getRoleLabel(role) {
   return roleMap[role?.toLowerCase?.()] || "Sinh viên";
 }
 
+function calculateProfileCompletion(formData) {
+  const fields = [
+    "fullName",
+    "dateOfBirth",
+    "gender",
+    "startYear",
+    "endYear",
+    "university",
+    "faculty",
+    "major",
+  ];
+  const filled = fields.filter((field) => Boolean(formData[field])).length;
+  return Math.round((filled / fields.length) * 100);
+}
+
+function buildInitialFormData(user) {
+  return {
+    username: user?.username || "",
+    email: user?.email || "",
+    fullName: user?.full_name || user?.fullName || "",
+    dateOfBirth: user?.date_of_birth || user?.dateOfBirth || "",
+    gender: user?.gender || "",
+    startYear: user?.academic_start_year?.toString() || user?.startYear || "",
+    endYear: user?.academic_end_year?.toString() || user?.endYear || "",
+    isGraduated: Boolean(user?.is_graduated ?? user?.isGraduated),
+    university: user?.university_id?.toString() || user?.university || "",
+    faculty: user?.faculty_id?.toString() || user?.faculty || "",
+    major: user?.major_id?.toString() || user?.major || "",
+    newPassword: "",
+    confirmPassword: "",
+  };
+}
+
 function MyAccount() {
   const { user, logout } = useAuth();
   const location = useLocation();
   const fileInputRef = useRef(null);
+  const yearOptions = useMemo(() => generateYearOptions(), []);
 
-  const avatarSrc = user?.avatar ?? "https://i.pravatar.cc/100";
-  const displayName = user?.full_name || user?.fullName || user?.username || "Người dùng";
-  const username = user?.username || "";
-  const email = user?.email || "";
+  const [formEdits, setFormEdits] = useState({});
+  const [avatarOverride, setAvatarOverride] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const formData = useMemo(
+    () => ({ ...buildInitialFormData(user), ...formEdits }),
+    [user, formEdits]
+  );
+
+  const avatarPreview =
+    avatarOverride ?? user?.avatar ?? "https://i.pravatar.cc/100";
+
+  const profileCompletion = calculateProfileCompletion(formData);
   const isEmailVerified = Boolean(user?.emailVerified ?? user?.is_verified);
+  const displayName = formData.fullName || user?.full_name || user?.username || "Người dùng";
+
+  useEffect(() => {
+    return () => {
+      if (avatarOverride?.startsWith("blob:")) {
+        URL.revokeObjectURL(avatarOverride);
+      }
+    };
+  }, [avatarOverride]);
+
+  const handleChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    setFormEdits((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleAvatarClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleAvatarChange = (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const previewUrl = URL.createObjectURL(file);
+    setAvatarOverride((prev) => {
+      if (prev?.startsWith("blob:")) {
+        URL.revokeObjectURL(prev);
+      }
+      return previewUrl;
+    });
+  };
+
+  const handleReset = () => {
+    setFormEdits({});
+    setShowPassword(false);
+    setShowConfirmPassword(false);
+    setAvatarOverride((prev) => {
+      if (prev?.startsWith("blob:")) {
+        URL.revokeObjectURL(prev);
+      }
+      return null;
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Profile data:", { ...formData, avatarPreview });
+  };
 
   const isNavActive = (path) => {
     if (path === "/my-account") {
@@ -107,17 +232,18 @@ function MyAccount() {
   return (
     <main className="my-account-page">
       <div className="my-account-layout">
-        {/* ── Sidebar ── */}
         <aside className="my-account-sidebar">
           <div className="sidebar-user">
             <img
               className="sidebar-user__avatar"
-              src={avatarSrc}
+              src={avatarPreview}
               alt={displayName}
             />
             <div className="sidebar-user__info">
               <p className="sidebar-user__name">{displayName}</p>
-              <p className="sidebar-user__username">@{username || "username"}</p>
+              <p className="sidebar-user__username">
+                @{formData.username || "username"}
+              </p>
               <span className="sidebar-user__badge">
                 {getRoleLabel(user?.role)}
               </span>
@@ -156,16 +282,16 @@ function MyAccount() {
           <div className="sidebar-progress">
             <div className="sidebar-progress__header">
               <span className="sidebar-progress__label">Hoàn thiện hồ sơ</span>
-              <span className="sidebar-progress__percent">0%</span>
+              <span className="sidebar-progress__percent">{profileCompletion}%</span>
             </div>
             <progress
               className="sidebar-progress__bar"
-              value={0}
+              value={profileCompletion}
               max={100}
               aria-label="Tiến độ hoàn thiện hồ sơ"
             />
             <p className="sidebar-progress__hint">
-              Vui lòng hoàn thiện thông tin để có thể đăng bài
+              Vui lòng hoàn thiện thông tin để có thể đăng bài 
             </p>
             <button type="button" className="sidebar-progress__btn">
               Hoàn thiện ngay →
@@ -173,29 +299,27 @@ function MyAccount() {
           </div>
         </aside>
 
-        {/* ── Main content ── */}
         <section className="my-account-main">
           <header className="my-account-header">
             <h1 className="my-account-header__title">Hồ sơ của tôi</h1>
             <p className="my-account-header__subtitle">
-              Cập nhật thông tin cá nhân để tăng độ tin cậy và sử dụng đầy đủ các tính năng
+              Cập nhật thông tin cá nhân để tăng độ tin cậy và sử dụng đầy đủ các
+              tính năng
             </p>
           </header>
 
-          <div className="my-account-form">
-            {/* ── Thông tin cá nhân ── */}
+          <form className="my-account-form" onSubmit={handleSubmit}>
             <div className="my-account-card">
               <h2 className="my-account-card__title">Thông tin cá nhân</h2>
 
               <div className="profile-section">
-                {/* Avatar */}
                 <div className="profile-avatar">
                   <div className="profile-avatar__preview">
-                    <img src={avatarSrc} alt="Ảnh đại diện" />
+                    <img src={avatarPreview} alt="Ảnh đại diện" />
                     <button
                       type="button"
                       className="profile-avatar__camera"
-                      onClick={() => fileInputRef.current?.click()}
+                      onClick={handleAvatarClick}
                       aria-label="Đổi ảnh đại diện"
                     >
                       <i className="bi bi-camera-fill" aria-hidden="true" />
@@ -205,7 +329,7 @@ function MyAccount() {
                   <button
                     type="button"
                     className="btn btn-outline profile-avatar__change"
-                    onClick={() => fileInputRef.current?.click()}
+                    onClick={handleAvatarClick}
                   >
                     Đổi ảnh
                   </button>
@@ -214,12 +338,12 @@ function MyAccount() {
                     type="file"
                     accept="image/jpeg,image/png"
                     className="profile-avatar__input"
+                    onChange={handleAvatarChange}
                     tabIndex={-1}
                     aria-hidden="true"
                   />
                 </div>
 
-                {/* Fields */}
                 <div className="profile-fields">
                   <div className="form-row form-row--2">
                     <div className="form-field">
@@ -231,7 +355,7 @@ function MyAccount() {
                         name="username"
                         type="text"
                         className="form-field__input field--disabled"
-                        defaultValue={username}
+                        value={formData.username}
                         readOnly
                       />
                       <span className="form-field__helper">
@@ -249,7 +373,7 @@ function MyAccount() {
                           name="email"
                           type="email"
                           className="form-field__input field--disabled"
-                          defaultValue={email}
+                          value={formData.email}
                           readOnly
                         />
                         {isEmailVerified && (
@@ -272,7 +396,8 @@ function MyAccount() {
                         name="fullName"
                         type="text"
                         className="form-field__input"
-                        defaultValue={user?.full_name || user?.fullName || ""}
+                        value={formData.fullName}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -287,7 +412,8 @@ function MyAccount() {
                         name="dateOfBirth"
                         type="date"
                         className="form-field__input"
-                        defaultValue={user?.date_of_birth || user?.dateOfBirth || ""}
+                        value={formData.dateOfBirth}
+                        onChange={handleChange}
                       />
                     </div>
 
@@ -299,7 +425,8 @@ function MyAccount() {
                         id="gender"
                         name="gender"
                         className="form-field__input"
-                        defaultValue={user?.gender || ""}
+                        value={formData.gender}
+                        onChange={handleChange}
                       >
                         <option value="">Chọn giới tính</option>
                         <option value="male">Nam</option>
@@ -314,14 +441,19 @@ function MyAccount() {
                       <label className="form-field__label" htmlFor="startYear">
                         Năm bắt đầu học
                       </label>
-                      {/* TODO: backend cung cấp danh sách năm */}
                       <select
                         id="startYear"
                         name="startYear"
                         className="form-field__input"
-                        defaultValue={user?.academic_start_year || ""}
+                        value={formData.startYear}
+                        onChange={handleChange}
                       >
                         <option value="">Chọn năm</option>
+                        {yearOptions.map((year) => (
+                          <option key={year} value={String(year)}>
+                            {year}
+                          </option>
+                        ))}
                       </select>
                     </div>
 
@@ -329,14 +461,19 @@ function MyAccount() {
                       <label className="form-field__label" htmlFor="endYear">
                         Năm kết thúc học (dự kiến)
                       </label>
-                      {/* TODO: backend cung cấp danh sách năm */}
                       <select
                         id="endYear"
                         name="endYear"
                         className="form-field__input"
-                        defaultValue={user?.academic_end_year || ""}
+                        value={formData.endYear}
+                        onChange={handleChange}
                       >
                         <option value="">Chọn năm</option>
+                        {yearOptions.map((year) => (
+                          <option key={year} value={String(year)}>
+                            {year}
+                          </option>
+                        ))}
                       </select>
                     </div>
 
@@ -347,7 +484,8 @@ function MyAccount() {
                           id="isGraduated"
                           name="isGraduated"
                           type="checkbox"
-                          defaultChecked={Boolean(user?.is_graduated ?? user?.isGraduated)}
+                          checked={formData.isGraduated}
+                          onChange={handleChange}
                         />
                         <span>Tôi đã tốt nghiệp</span>
                       </label>
@@ -359,14 +497,18 @@ function MyAccount() {
                       <label className="form-field__label" htmlFor="university">
                         Trường
                       </label>
-                      {/* TODO: backend cung cấp danh sách trường */}
                       <select
                         id="university"
                         name="university"
                         className="form-field__input"
-                        defaultValue={user?.university_id || ""}
+                        value={formData.university}
+                        onChange={handleChange}
                       >
-                        <option value="">Chọn trường</option>
+                        {UNIVERSITY_OPTIONS.map((option) => (
+                          <option key={option.value || "empty"} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
                       </select>
                     </div>
 
@@ -374,35 +516,44 @@ function MyAccount() {
                       <label className="form-field__label" htmlFor="faculty">
                         Khoa
                       </label>
-                      <input
+                      <select
                         id="faculty"
                         name="faculty"
-                        type="text"
                         className="form-field__input"
-                        defaultValue={user?.faculty || ""}
-                        placeholder="Nhập tên khoa"
-                      />
+                        value={formData.faculty}
+                        onChange={handleChange}
+                      >
+                        {FACULTY_OPTIONS.map((option) => (
+                          <option key={option.value || "empty-faculty"} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
                     </div>
 
                     <div className="form-field">
                       <label className="form-field__label" htmlFor="major">
                         Ngành
                       </label>
-                      <input
+                      <select
                         id="major"
                         name="major"
-                        type="text"
                         className="form-field__input"
-                        defaultValue={user?.major || ""}
-                        placeholder="Nhập tên ngành"
-                      />
+                        value={formData.major}
+                        onChange={handleChange}
+                      >
+                        {MAJOR_OPTIONS.map((option) => (
+                          <option key={option.value || "empty-major"} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* ── Thông tin tài khoản ── */}
             <div className="my-account-card">
               <h2 className="my-account-card__title">Thông tin tài khoản</h2>
 
@@ -415,10 +566,23 @@ function MyAccount() {
                     <input
                       id="newPassword"
                       name="newPassword"
-                      type="password"
+                      type={showPassword ? "text" : "password"}
                       className="form-field__input"
+                      value={formData.newPassword}
+                      onChange={handleChange}
                       autoComplete="new-password"
                     />
+                    <button
+                      type="button"
+                      className="form-field__toggle"
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      aria-label={showPassword ? "Ẩn mật khẩu" : "Hiện mật khẩu"}
+                    >
+                      <i
+                        className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}
+                        aria-hidden="true"
+                      />
+                    </button>
                   </div>
                 </div>
 
@@ -430,28 +594,44 @@ function MyAccount() {
                     <input
                       id="confirmPassword"
                       name="confirmPassword"
-                      type="password"
+                      type={showConfirmPassword ? "text" : "password"}
                       className="form-field__input"
+                      value={formData.confirmPassword}
+                      onChange={handleChange}
                       autoComplete="new-password"
                     />
+                    <button
+                      type="button"
+                      className="form-field__toggle"
+                      onClick={() => setShowConfirmPassword((prev) => !prev)}
+                      aria-label={
+                        showConfirmPassword ? "Ẩn mật khẩu" : "Hiện mật khẩu"
+                      }
+                    >
+                      <i
+                        className={`bi ${
+                          showConfirmPassword ? "bi-eye-slash" : "bi-eye"
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="my-account-actions">
-              <button type="button" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary">
                 <i className="bi bi-floppy" aria-hidden="true" />
                 Lưu thông tin
               </button>
-              <button type="button" className="btn btn-secondary">
+              <button type="button" className="btn btn-secondary" onClick={handleReset}>
                 Hủy
               </button>
             </div>
-          </div>
+          </form>
         </section>
 
-        {/* ── Right panel ── */}
         <aside className="my-account-panel">
           <div className="panel-card panel-card--benefits">
             <div className="panel-card__header">
