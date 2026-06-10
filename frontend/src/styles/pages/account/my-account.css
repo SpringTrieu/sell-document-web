@@ -1,4 +1,4 @@
-/* ── Page shell ───────────────────────────────────────────────update ver 2 */
+/* ── Page shell ─────────────────────────────────────────────── */
 
 .my-account-page {
   min-height: calc(100vh - 72px);
@@ -467,6 +467,25 @@
   padding-right: 42px;
 }
 
+.form-field__toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.form-field__toggle:hover {
+  color: var(--text-heading);
+}
 
 /* ── Buttons ───────────────────────────────────────────────────── */
 
