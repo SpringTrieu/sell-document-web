@@ -8,9 +8,9 @@
 
 .my-account-layout {
   display: grid;
-  grid-template-columns: minmax(220px, 240px) minmax(0, 1fr) minmax(240px, 280px);
+  grid-template-columns: minmax(220px, 240px) minmax(0, 1fr);
   gap: clamp(16px, 2vw, 24px);
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   align-items: start;
 }
@@ -22,18 +22,19 @@
   top: 88px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
   background: var(--white);
   border-radius: 16px;
-  padding: 20px 16px;
+  padding: 0;
   box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
 }
 
 .sidebar-user {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding-bottom: 16px;
+  padding: 20px 16px 16px;
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -79,6 +80,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding: 8px 8px;
 }
 
 .sidebar-nav__item {
@@ -156,7 +158,7 @@
 
 .sidebar-progress {
   margin-top: auto;
-  padding-top: 16px;
+  padding: 16px;
   border-top: 1px solid #e2e8f0;
 }
 
@@ -539,10 +541,12 @@
 
 .my-account-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 12px;
   flex-wrap: wrap;
-  padding-top: 4px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 4px;
 }
 
 /* ── Right panel ───────────────────────────────────────────────── */
@@ -631,17 +635,6 @@
   .my-account-layout {
     grid-template-columns: minmax(220px, 240px) minmax(0, 1fr);
   }
-
-  .my-account-panel {
-    grid-column: 1 / -1;
-    position: static;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .panel-card {
-    flex: 1 1 280px;
-  }
 }
 
 @media (max-width: 860px) {
@@ -649,8 +642,7 @@
     grid-template-columns: 1fr;
   }
 
-  .my-account-sidebar,
-  .my-account-panel {
+  .my-account-sidebar {
     position: static;
   }
 
@@ -687,10 +679,6 @@
 
   .form-field--checkbox {
     justify-content: flex-start;
-  }
-
-  .my-account-panel {
-    flex-direction: column;
   }
 
   .my-account-actions {
