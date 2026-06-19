@@ -25,17 +25,26 @@ function Header() {
     return (
       <header className="account-header">
         <div className="account-header-container">
-          <Link className="navbar-logo" to="/">
-            ✦ Học Tốt
-          </Link>
-          <div className="account-search-bar">
-            <i className="bi bi-search"></i>
-            <input
-              type="text"
-              placeholder="Tìm kiếm tài liệu, bài viết, việc làm..."
-              aria-label="Tìm kiếm"
-            />
+          {/* Cụm TRÁI: Logo thẳng hàng với mép trái Sidebar */}
+          <div className="account-header-logo">
+            <Link className="navbar-logo" to="/">
+              ✦ Học Tốt
+            </Link>
           </div>
+
+          {/* Cụm GIỮA: Search bar thu ngắn, căn giữa Header */}
+          <div className="account-header-center">
+            <div className="account-search-bar">
+              <i className="bi bi-search"></i>
+              <input
+                type="text"
+                placeholder="Tìm kiếm tài liệu, bài viết, việc làm..."
+                aria-label="Tìm kiếm"
+              />
+            </div>
+          </div>
+
+          {/* Cụm PHẢI: Icons sát mép phải */}
           <div className="account-actions">
             <button className="icon-btn" aria-label="Thông báo">
               <i className="bi bi-bell"></i>
