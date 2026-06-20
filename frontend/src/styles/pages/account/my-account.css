@@ -7,16 +7,16 @@
 }
 
 .my-account-page {
-  min-height: calc(100vh - var(--account-header-h));
   background: #f8fafc;
   /* Không padding ngang — sidebar sẽ tự dính sát trái */
   padding: 0;
-  display: flex;
-  align-items: flex-start;
 }
 
 .my-account-layout {
-  display: contents; /* bỏ wrapper thừa — children tự vào flex của .my-account-page */
+  display: flex;
+  align-items: flex-start;
+  min-height: calc(100vh - var(--account-header-h));
+  /* Sidebar cần container có chiều cao xác định để sticky hoạt động */
 }
 
 /* ── Sidebar ─────────────────────────────────────────────────── */
