@@ -1,35 +1,11 @@
-import { useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthContext";
 import "../../styles/pages/account/my-account.css";
 
-const NAV_ITEMS = [
-  { key: "profile",       path: "/my-account",               icon: "bi-person-circle",     label: "Hồ sơ của tôi",        description: "Quản lý thông tin cá nhân" },
-  { key: "posts",         path: "/my-account/posts",         icon: "bi-file-earmark-text",  label: "Bài đăng của tôi",     description: "Quản lý bài đăng đã tạo" },
-  { key: "saved",         path: "/my-account/saved",         icon: "bi-bookmark",           label: "Bài viết đã lưu",      description: "Những bài viết đã lưu" },
-  { key: "orders",        path: "/my-account/orders",        icon: "bi-bag",                label: "Đơn hàng của tôi",     description: "Quản lý đơn hàng" },
-  { key: "wallet",        path: "/my-account/wallet",        icon: "bi-wallet2",            label: "Ví của tôi",           description: "Số dư và lịch sử giao dịch" },
-  { key: "bank",          path: "/my-account/bank",          icon: "bi-bank",               label: "Tài khoản ngân hàng",  description: "Quản lý tài khoản ngân hàng" },
-  { key: "security",      path: "/my-account/security",      icon: "bi-shield-lock",        label: "Bảo mật",              description: "Đổi mật khẩu, bảo mật 2 lớp" },
-  { key: "notifications", path: "/my-account/notifications", icon: "bi-bell",               label: "Thông báo",            description: "Cài đặt thông báo" },
-  { key: "settings",      path: "/my-account/settings",      icon: "bi-gear",               label: "Cài đặt tài khoản",   description: "Ngôn ngữ, giao diện,..." },
-];
-
 function MyAccount() {
-  const { logout } = useAuth();
-  const location = useLocation();
-  const fileInputRef = useRef(null);
-
-  const isNavActive = (path) =>
-    path === "/my-account"
-      ? location.pathname === "/my-account"
-      : location.pathname.startsWith(path);
-
   return (
     <main className="my-account-page">
       <div className="my-account-layout">
 
-        {/* ── Sidebar (Đã gộp liền mạch thành 1 khối) ── */}
+        {/* ── Sidebar ── */}
         <aside className="my-account-sidebar">
           <div className="sidebar-user">
             <img className="sidebar-user__avatar" src="https://i.pravatar.cc/100" alt="Người dùng" />
@@ -41,30 +17,88 @@ function MyAccount() {
           </div>
 
           <nav className="sidebar-nav" aria-label="Menu tài khoản">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.key}
-                to={item.path}
-                className={`sidebar-nav__item${isNavActive(item.path) ? " sidebar-nav__item--active" : ""}`}
-              >
-                <i className={`bi ${item.icon} sidebar-nav__icon`} aria-hidden="true" />
-                <span className="sidebar-nav__text">
-                  <span className="sidebar-nav__label">{item.label}</span>
-                  <span className="sidebar-nav__desc">{item.description}</span>
-                </span>
-              </Link>
-            ))}
+            <a href="/my-account" className="sidebar-nav__item sidebar-nav__item--active">
+              <i className="bi bi-person-circle sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Hồ sơ của tôi</span>
+                <span className="sidebar-nav__desc">Quản lý thông tin cá nhân</span>
+              </span>
+            </a>
 
-            <button type="button" className="sidebar-nav__item sidebar-nav__item--logout" onClick={logout}>
+            <a href="/my-account/posts" className="sidebar-nav__item">
+              <i className="bi bi-file-earmark-text sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Bài đăng của tôi</span>
+                <span className="sidebar-nav__desc">Quản lý bài đăng đã tạo</span>
+              </span>
+            </a>
+
+            <a href="/my-account/saved" className="sidebar-nav__item">
+              <i className="bi bi-bookmark sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Bài viết đã lưu</span>
+                <span className="sidebar-nav__desc">Những bài viết đã lưu</span>
+              </span>
+            </a>
+
+            <a href="/my-account/orders" className="sidebar-nav__item">
+              <i className="bi bi-bag sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Đơn hàng của tôi</span>
+                <span className="sidebar-nav__desc">Quản lý đơn hàng</span>
+              </span>
+            </a>
+
+            <a href="/my-account/wallet" className="sidebar-nav__item">
+              <i className="bi bi-wallet2 sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Ví của tôi</span>
+                <span className="sidebar-nav__desc">Số dư và lịch sử giao dịch</span>
+              </span>
+            </a>
+
+            <a href="/my-account/bank" className="sidebar-nav__item">
+              <i className="bi bi-bank sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Tài khoản ngân hàng</span>
+                <span className="sidebar-nav__desc">Quản lý tài khoản ngân hàng</span>
+              </span>
+            </a>
+
+            <a href="/my-account/security" className="sidebar-nav__item">
+              <i className="bi bi-shield-lock sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Bảo mật</span>
+                <span className="sidebar-nav__desc">Đổi mật khẩu, bảo mật 2 lớp</span>
+              </span>
+            </a>
+
+            <a href="/my-account/notifications" className="sidebar-nav__item">
+              <i className="bi bi-bell sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Thông báo</span>
+                <span className="sidebar-nav__desc">Cài đặt thông báo</span>
+              </span>
+            </a>
+
+            <a href="/my-account/settings" className="sidebar-nav__item">
+              <i className="bi bi-gear sidebar-nav__icon" aria-hidden="true" />
+              <span className="sidebar-nav__text">
+                <span className="sidebar-nav__label">Cài đặt tài khoản</span>
+                <span className="sidebar-nav__desc">Ngôn ngữ, giao diện,...</span>
+              </span>
+            </a>
+
+            <a href="#" className="sidebar-nav__item sidebar-nav__item--logout">
               <i className="bi bi-box-arrow-right sidebar-nav__icon" aria-hidden="true" />
               <span className="sidebar-nav__text">
                 <span className="sidebar-nav__label">Đăng xuất</span>
               </span>
-            </button>
+            </a>
           </nav>
         </aside>
 
-        {/* ── Main content (Form tràn rộng 100% - Đã xóa cột phải và block Mật khẩu) ── */}
+        {/* ── Main content ── */}
         <section className="my-account-main">
           <header className="my-account-header">
             <h1 className="my-account-header__title">Hồ sơ của tôi</h1>
@@ -82,15 +116,15 @@ function MyAccount() {
                 <div className="profile-avatar">
                   <div className="profile-avatar__preview">
                     <img src="https://i.pravatar.cc/100" alt="Ảnh đại diện" />
-                    <button type="button" className="profile-avatar__camera" onClick={() => fileInputRef.current?.click()} aria-label="Đổi ảnh đại diện">
+                    <button type="button" className="profile-avatar__camera" aria-label="Đổi ảnh đại diện">
                       <i className="bi bi-camera-fill" aria-hidden="true" />
                     </button>
                   </div>
                   <p className="profile-avatar__hint">JPG, PNG tối đa 2MB</p>
-                  <button type="button" className="btn btn-outline profile-avatar__change" onClick={() => fileInputRef.current?.click()}>
+                  <button type="button" className="btn btn-outline profile-avatar__change">
                     Đổi ảnh
                   </button>
-                  <input ref={fileInputRef} type="file" accept="image/jpeg,image/png" className="profile-avatar__input" tabIndex={-1} aria-hidden="true" />
+                  <input type="file" accept="image/jpeg,image/png" className="profile-avatar__input" tabIndex={-1} aria-hidden="true" />
                 </div>
 
                 {/* Fields */}
@@ -153,7 +187,7 @@ function MyAccount() {
                     </div>
                   </div>
 
-                  {/* Row 5: university + faculty + major (Tất cả đều chuyển thành input text) */}
+                  {/* Row 5: university + faculty + major */}
                   <div className="form-row form-row--3">
                     <div className="form-field">
                       <label className="form-field__label" htmlFor="university">Trường</label>
@@ -169,7 +203,7 @@ function MyAccount() {
                     </div>
                   </div>
 
-                  {/* Cụm nút Lưu thông tin nằm gọn bên trong Ô Thông tin cá nhân */}
+                  {/* Nút Lưu thông tin */}
                   <div className="my-account-actions">
                     <button type="submit" className="btn btn-primary">
                       <i className="bi bi-floppy" aria-hidden="true" />
@@ -191,4 +225,4 @@ function MyAccount() {
   );
 }
 
-export default MyAccount; 
+export default MyAccount;
