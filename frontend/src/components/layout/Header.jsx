@@ -5,7 +5,9 @@ function Header() {
   const { user, logout } = useAuth();
   const location = useLocation();
     const avatarSrc = avatarList.find((avatar) => avatar.includes(user?.avatar)) || avatarList[0];
-  const isAccountPage = location.pathname.startsWith("/my-account");
+  const isSpecialHeaderPage =
+  location.pathname.startsWith("/my-account") ||
+  location.pathname.startsWith("/forum");
 
   if (location.pathname === "/login") {
     return (
@@ -40,7 +42,7 @@ function Header() {
           ✦ Học Tốt
         </Link>
 
-        {isAccountPage ? (
+        {isSpecialHeaderPage ? (
   <>
     <form className="d-flex flex-grow-1 mx-4" role="search">
       <div className="input-group">

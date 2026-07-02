@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/routes/ProtectedRoute";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import Forum from "./pages/forum/Forum";
 
 import MyAccount from "./pages/accounts/MyAccount";
 import VerifyEmail from "./pages/accounts/VerifyEmail";
@@ -30,7 +31,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-
+          <Route path="/forum" element={<Forum />} />
 
 
           <Route element={<ProtectedRoute />}>
