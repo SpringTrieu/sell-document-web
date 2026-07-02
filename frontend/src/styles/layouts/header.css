@@ -1,12 +1,13 @@
 .custom-navbar {
-    background: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 6px 12px;
-    box-shadow: 0 1px 12px rgba(16, 44, 58, 0.06);
+  height: 65px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 6px 12px;
+  box-shadow: 0 1px 12px rgba(16, 44, 58, 0.06);
 }
 
 .home-page .custom-navbar {

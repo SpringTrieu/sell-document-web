@@ -3,11 +3,12 @@
 from flask import Flask
 from flask_cors import CORS
 from app.config import Config
-from app.database import db, login
+from app.database import db, login, mail
 from flask import Flask
 from flask_cors import CORS
-
+from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
+
 
 def create_app():
     app = Flask(__name__)
@@ -21,17 +22,21 @@ def create_app():
     app.config["JWT_COOKIE_CSRF_PROTECT"] = False
     CORS(app, supports_credentials=True)
     db.init_app(app)
+    Migrate(app, db)
     JWTManager(app)
     login.init_app(app)
+    mail.init_app(app)
 
     from app.routes.main import main_bp
     from app.routes.auth import auth_bp
-    #from app.routes.user import user_bp
-    #from app.routes.admin import admin_bp
+    from app.routes.university import university_bp
+    # from app.routes.user import user_bp
+    # from app.routes.admin import admin_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
-    #app.register_blueprint(user_bp)
-    #app.register_blueprint(admin_bp)
+    app.register_blueprint(university_bp)
+    # app.register_blueprint(user_bp)
+    # app.register_blueprint(admin_bp)
 
     return app

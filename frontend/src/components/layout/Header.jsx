@@ -1,11 +1,11 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-
+import avatarList from "../avatar/avatarList";
 function Header() {
   const { user, logout } = useAuth();
   const location = useLocation();
-
-  const isAccountPage = location.pathname === "/my-account";
+    const avatarSrc = avatarList.find((avatar) => avatar.includes(user?.avatar)) || avatarList[0];
+  const isAccountPage = location.pathname.startsWith("/my-account");
 
   if (location.pathname === "/login") {
     return (
@@ -41,52 +41,79 @@ function Header() {
         </Link>
 
         {isAccountPage ? (
-          <>
-            <div className="account-header-search">
-              <i className="bi bi-search"></i>
-              <input
-                type="text"
-                placeholder="Tìm kiếm tài liệu, bài viết, việc làm..."
-              />
-            </div>
+  <>
+    <form className="d-flex flex-grow-1 mx-4" role="search">
+      <div className="input-group">
+        <span className="input-group-text bg-light border-end-0">
+          <i className="bi bi-search"></i>
+        </span>
 
-            <div className="account-header-actions">
-              <button className="header-icon-btn">
-                <i className="bi bi-bell"></i>
-                <span className="notification-badge">3</span>
-              </button>
+        <input
+          className="form-control bg-light border-start-0"
+          type="search"
+          placeholder="Tìm kiếm tài liệu, bài viết, việc làm..."
+        />
+      </div>
+    </form>
 
-              <button className="header-icon-btn">
-                <i className="bi bi-chat-left-text"></i>
-              </button>
+    <div className="d-flex align-items-center gap-3">
+      <button className="btn position-relative p-0 border-0 bg-transparent">
+        <i className="bi bi-bell fs-5"></i>
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          3
+        </span>
+      </button>
 
-              <div className="user-dropdown">
-  <div className="account-user-mini">
-    <img src="https://i.pravatar.cc/100" alt="avatar" />
+      <button className="btn p-0 border-0 bg-transparent">
+        <i className="bi bi-chat-left-text fs-5"></i>
+      </button>
 
-    <div>
-      <strong>{user?.username || "Nguyễn Văn A"}</strong>
-      <p>Xem trang cá nhân</p>
+      <div className="dropdown">
+        <button
+          className="btn d-flex align-items-center gap-2 dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src={avatarSrc}
+            alt="avatar"
+            className="rounded-circle"
+            width="42"
+            height="42"
+          />
+
+          <div className="text-start">
+            <strong className="d-block small">
+  {user?.username || "Người dùng"}
+</strong>
+            <span className="text-muted small">Xem trang cá nhân</span>
+          </div>
+        </button>
+
+        <ul className="dropdown-menu dropdown-menu-end">
+          <li>
+            <Link className="dropdown-item" to="/my-account">
+              Tài Khoản Của Tôi
+            </Link>
+          </li>
+
+          <li>
+            <button className="dropdown-item" type="button">
+              Đơn Mua
+            </button>
+          </li>
+
+          <li>
+            <button className="dropdown-item text-danger" onClick={logout}>
+              Đăng Xuất
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <i className="bi bi-chevron-down"></i>
-  </div>
-
-  <div className="user-dropdown-menu">
-    <Link to="/my-account" className="user-dropdown-item">
-      Tài Khoản Của Tôi
-    </Link>
-
-    <div className="user-dropdown-item">Đơn Mua</div>
-
-    <button className="user-dropdown-item logout-btn" onClick={logout}>
-      Đăng Xuất
-    </button>
-  </div>
-</div>
-            </div>
-          </>
-        ) : (
+  </>
+) : (
           <>
             <div className="collapse navbar-collapse justify-content-center" id="mainNavbar">
               <ul className="navbar-nav gap-lg-4">
