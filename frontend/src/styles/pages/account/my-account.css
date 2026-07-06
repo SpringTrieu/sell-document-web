@@ -367,107 +367,13 @@
   min-width: 0;
 }
 
-/* ── Form fields ───────────────────────────────────────────────── */
-
-.form-row {
-  display: grid;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.form-row:last-child {
-  margin-bottom: 0;
-}
-
-.form-row--1 {
-  grid-template-columns: 1fr;
-}
-
-.form-row--2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.form-row--3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+/* ── Form đặc thù account (year-grad row) ────────────────────── */
+/* form-row, form-field, btn, badge đã chuyển sang utilities.css  */
 
 /* Row đặc biệt: startYear + endYear + checkbox Đã tốt nghiệp */
 .form-row--year-grad {
   grid-template-columns: 1fr 1fr auto;
-  align-items: end; /* căn đáy — checkbox thẳng hàng với input */
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  min-width: 0;
-}
-
-.form-field__label {
-  font-size: 13px;
-  font-weight: var(--font-weight-medium);
-  color: var(--text-heading);
-}
-
-.form-field__input {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 14px;
-  color: var(--text-heading);
-  background: var(--white);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.form-field__input:focus {
-  outline: none;
-  border-color: var(--main-blue);
-  box-shadow: 0 0 0 3px rgba(17, 151, 192, 0.15);
-}
-
-.form-field__input.field--disabled {
-  background: #f1f5f9;
-  color: var(--text-muted);
-  cursor: not-allowed;
-}
-
-.form-field__helper {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.4;
-}
-
-.form-field__email-wrap {
-  position: relative;
-}
-
-.form-field__email-wrap .form-field__input {
-  padding-right: 110px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: var(--font-weight-medium);
-  white-space: nowrap;
-}
-
-.badge--verified {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  color: #15803d;
-  background: #dcfce7;
-}
-
-.form-field--checkbox {
-  justify-content: flex-end;
+  align-items: end;
 }
 
 /* Checkbox trong row year-grad: container tinh tế */
@@ -488,7 +394,6 @@
 }
 
 .form-row--year-grad .form-field--checkbox .form-field__label {
-  /* Ẩn label text "Đã tốt nghiệp" vì checkbox-label đã có chữ */
   display: none;
 }
 
@@ -500,101 +405,6 @@
   gap: 7px;
 }
 
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: var(--text-body);
-  cursor: pointer;
-  padding-top: 4px;
-}
-
-.checkbox-label input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--main-blue);
-  cursor: pointer;
-}
-
-.form-field__password {
-  position: relative;
-}
-
-.form-field__password .form-field__input {
-  padding-right: 42px;
-}
-
-.form-field__toggle {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  border: none;
-  background: transparent;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  line-height: 1;
-}
-
-.form-field__toggle:hover {
-  color: var(--text-heading);
-}
-
-/* ── Buttons ───────────────────────────────────────────────────── */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: var(--font-weight-medium);
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  border: none;
-  background: var(--main-blue);
-  color: var(--white);
-}
-
-.btn-primary:hover {
-  background: #0e86ab;
-}
-
-.btn-secondary {
-  border: 1px solid #d1d5db;
-  background: var(--white);
-  color: var(--text-body);
-}
-
-.btn-secondary:hover {
-  background: #f9fafb;
-  border-color: #9ca3af;
-}
-
-.btn-outline {
-  border: 1px solid #d1d5db;
-  background: var(--white);
-  color: var(--text-heading);
-  padding: 8px 16px;
-  font-size: 13px;
-}
-
-.btn-outline:hover {
-  border-color: var(--main-blue);
-  color: var(--main-blue);
-}
-
 .my-account-actions {
   display: flex;
   justify-content: flex-end;
@@ -604,6 +414,8 @@
   border-top: 1px solid #e2e8f0;
   margin-top: 4px;
 }
+
+/* ── Buttons (đã chuyển sang utilities.css) ─────────────────────── */
 
 /* ── Right panel ───────────────────────────────────────────────── */
 
@@ -730,14 +542,7 @@
     padding: 16px 12px;
   }
 
-  .form-row--2,
-  .form-row--3 {
-    grid-template-columns: 1fr;
-  }
-
-  .form-field--checkbox {
-    justify-content: flex-start;
-  }
+  /* form-row--2, form-row--3, form-field--checkbox → utilities.css */
 
   .my-account-actions {
     flex-direction: column;

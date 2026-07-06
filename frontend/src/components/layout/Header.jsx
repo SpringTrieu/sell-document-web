@@ -21,7 +21,7 @@ function Header() {
   }
 
   // Account page has different header (with search and notifications)
-  if (location.pathname.startsWith("/my-account")) {
+  if (location.pathname.startsWith("/my-account") || location.pathname.startsWith("/forum")) {
     return (
       <header className="account-header">
         <div className="account-header-container">

@@ -1,6 +1,7 @@
 @import './base/variables.css';
 @import './base/reset.css';
 @import './base/typography.css';
+@import './base/utilities.css';
 
 @import '../components/common/AppModal.css';
 
@@ -14,3 +15,4 @@
 @import './pages/home.css';
 @import './pages/login.css';
 @import './pages/register.css';
+@import './pages/forum/Forum.css';

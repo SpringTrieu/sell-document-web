@@ -14,12 +14,18 @@ export async function login(data) {
 }
 
 export async function getCurrentUser() {
-  const res = await fetch(`${API_URL}/me`, {
-    method: "GET",
-    credentials: "include",
-  });
+  try {
+    const res = await fetch(`${API_URL}/me`, {
+      method: "GET",
+      credentials: "include",
+      signal: AbortSignal.timeout(3000), // fail fast sau 3s khi backend offline
+    });
 
-  return await res.json();
+    return await res.json();
+  } catch {
+    // Backend chưa chạy hoặc network error — trả về thất bại yên lặng
+    return { success: false };
+  }
 }
 
 export async function logout() {

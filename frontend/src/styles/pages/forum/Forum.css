@@ -1,4 +1,741 @@
+/* ========================================
+   FORUM PAGE — CSS
+   Tất cả selector có tiền tố .forum- để tránh
+   xung đột style với các trang khác trong project.
+   ======================================== */
+
+/* ── CSS variables (local scope) ─────────────────────────────
+   --forum-header-h được set động bằng ResizeObserver trong Forum.jsx.
+   65px là fallback — chỉ dùng khi JS chưa chạy.
+   ─────────────────────────────────────────────────────────── */
+:root {
+  --forum-header-h: 65px;  /* fallback — JS sẽ ghi đè giá trị thực tế */
+  --forum-left-w:   220px; /* sidebar trái: cố định px, không dùng vw */
+  --forum-right-w:  260px; /* sidebar phải: cố định px, không dùng vw */
+}
+
+/* ── Page shell ─────────────────────────────────────────────── */
+
 .forum-page {
-  min-height: 100vh;
-  padding: 24px;
+  display: flex;
+  background: #f8f9fb;
+  min-height: calc(100vh - var(--forum-header-h));
+  /* KHÔNG đặt max-width + margin: 0 auto ở đây (vi phạm quy tắc mục 2):
+     sẽ làm sidebar không dính mép màn hình trên màn hình lớn hơn 1600px.
+     Xem designfrontend.md § 2 để biết lý do. */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   LEFT SIDEBAR
+   ======================================== */
+
+.forum-left-sidebar {
+  flex-shrink: 0;
+  width: var(--forum-left-w);
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 2px 0 1rem rgba(15, 23, 42, 0.05);
+  padding: 0.5rem 0;
+  /* Sticky bám dưới header — KHÔNG ép height cố định, KHÔNG ẩn overflow.
+     Sidebar sẽ dài tự nhiên theo nội dung và cuộn cùng toàn trang.
+     Xem designfrontend.md § 3 (Hướng A) và § 4. */
+  position: sticky;
+  top: var(--forum-header-h);
+  align-self: flex-start;
+}
+
+/* Nav */
+.forum-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0.375rem 0.5rem;
+  flex: 1;
+}
+
+.forum-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border-left: 3px solid transparent;
+  background: transparent;
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 13.5px;
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.forum-nav__item:hover {
+  background: #f1f5f9;
+  color: #1197c0;
+}
+
+.forum-nav__item--active {
+  background: #eef9fd;
+  color: #1197c0;
+  border-left-color: #1197c0;
+  font-weight: 600;
+}
+
+.forum-nav__icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.forum-nav__label {
+  font-size: 13.5px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Premium box */
+.forum-premium-box {
+  margin: 0.75rem 0.625rem 0.875rem;
+  background: linear-gradient(135deg, #1197c0 0%, #0e7ba3 100%);
+  border-radius: 14px;
+  padding: 14px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.forum-premium-box::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.forum-premium-box::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  pointer-events: none;
+}
+
+.forum-premium-box__icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.forum-premium-box__title {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.forum-premium-box__desc {
+  margin: 0 0 12px;
+  font-size: 11px;
+  opacity: 0.88;
+  line-height: 1.5;
+}
+
+.forum-premium-box__btn {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  color: #1197c0;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.forum-premium-box__btn:hover {
+  opacity: 0.9;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+.forum-main {
+  flex: 1 1 0;
+  min-width: 0;   /* bắt buộc: ngăn flex item bị tràn khi nội dung dài (xem designfrontend.md § 2) */
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* KHÔNG đặt overflow: hidden ở đây — gây clip shadow card hover và không cần thiết */
+}
+
+/* Content header */
+.forum-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.forum-content-header__title {
+  margin: 0 0 3px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.forum-content-header__subtitle {
+  margin: 0;
+  font-size: 13.5px;
+  color: #6b7280;
+}
+
+.forum-btn-post {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #1197c0;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.forum-btn-post:hover {
+  background: #0e86ab;
+  transform: translateY(-1px);
+}
+
+/* Tabs */
+.forum-tabs {
+  display: flex;
+  gap: 3px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  flex-wrap: wrap;
+}
+
+.forum-tab {
+  padding: 7px 13px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.forum-tab:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.forum-tab--active {
+  background: #1197c0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.forum-tab--active:hover {
+  background: #0e86ab;
+  color: #fff;
+}
+
+/* Post list */
+.forum-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  /* KHÔNG đặt max-width ở đây: post list phải lấp đầy toàn bộ chiều rộng
+     khả dụng của .forum-main (= viewport trừ 2 sidebar).
+     Trên 1920px với sidebar 220+260px, main rộng ~1440px — nếu max-width: 900px
+     sẽ tạo khoảng trống 540px bên phải gây cảm giác "lọt thỏm".
+     Xem designfrontend.md § 2 và ghi chú mục 7 (max-width bên trong main). */
+  width: 100%;
+}
+
+/* Post card */
+.forum-post-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  overflow: hidden;          /* tránh nội dung tràn ra ngoài card */
+}
+
+.forum-post-card:hover {
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
+  transform: translateY(-2px);
+}
+
+.forum-post-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.forum-post-card__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;              /* cho phép text bên trong bị cắt đúng cách */
+}
+
+.forum-post-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.forum-post-card__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.forum-post-card__author-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.forum-post-card__author-school {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.forum-post-card__top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.forum-post-card__time {
+  font-size: 11.5px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.forum-post-card__bookmark {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #cbd5e1;
+  font-size: 15px;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s ease;
+}
+
+.forum-post-card__bookmark:hover {
+  color: #1197c0;
+}
+
+/* Badge */
+.forum-post-card__badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.forum-badge--viec-lam  { background: #f3e8ff; color: #7c3aed; }
+.forum-badge--ho-tro    { background: #e0f2fe; color: #0369a1; }
+.forum-badge--do-an     { background: #fef3c7; color: #b45309; }
+.forum-badge--mua-ban   { background: #dcfce7; color: #15803d; }
+.forum-badge--khac      { background: #f1f5f9; color: #64748b; }
+
+/* Title */
+.forum-post-card__title {
+  margin: 0 0 5px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Không clamp title để tránh mất thông tin quan trọng */
+}
+
+/* Description */
+.forum-post-card__desc {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Meta row */
+.forum-post-card__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.forum-post-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+.forum-post-card__meta-item i {
+  font-size: 13px;
+  color: #1197c0;
+  flex-shrink: 0;
+}
+
+.forum-post-card__price {
+  font-weight: 600;
+  color: #1197c0;
+}
+
+/* Bottom */
+.forum-post-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forum-btn-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #1197c0;
+  background: transparent;
+  color: #1197c0;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.forum-btn-detail:hover {
+  background: #1197c0;
+  color: #fff;
+}
+
+/* ========================================
+   RIGHT SIDEBAR — Bộ lọc
+   ======================================== */
+
+.forum-right-sidebar {
+  flex-shrink: 0;
+  width: var(--forum-right-w); /* cố định 260px, không vw */
+  padding: 1.25rem 0.875rem 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  box-sizing: border-box;
+  /* Sticky bám dưới header — KHÔNG ép height, KHÔNG ẩn overflow.
+     Sidebar cuộn cùng toàn trang để "Lưu ý khi tham gia diễn đàn"
+     luôn nhìn thấy được mà không cần vùng cuộn ẩn.
+     Xem designfrontend.md § 3 (Hướng A) và § 4. */
+  position: sticky;
+  top: var(--forum-header-h);
+  align-self: flex-start;
+}
+
+/* Filter box */
+.forum-filter-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+}
+
+.forum-filter-box__title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.forum-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.forum-filter-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.forum-filter-input,
+.forum-filter-select {
+  width: 100%;
+  padding: 8px 11px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  font-size: 13px;
+  color: #0f172a;
+  background: #f8fafc;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.forum-filter-input:focus,
+.forum-filter-select:focus {
+  border-color: #1197c0;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(17, 151, 192, 0.12);
+}
+
+.forum-filter-select-wrap {
+  position: relative;
+}
+
+.forum-filter-select-wrap::after {
+  content: "\F282";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.forum-filter-search-wrap {
+  position: relative;
+}
+
+.forum-filter-search-wrap .forum-filter-input {
+  padding-right: 34px;
+}
+
+.forum-filter-search-wrap i {
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.forum-filter-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 4px 0 12px;
+}
+
+.forum-btn-apply {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 9px;
+  border: none;
+  background: #1197c0;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  margin-bottom: 7px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.forum-btn-apply:hover {
+  background: #0e86ab;
+}
+
+.forum-btn-reset {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 12.5px;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.15s ease;
+  font-family: inherit;
+}
+
+.forum-btn-reset:hover {
+  color: #ef4444;
+}
+
+/* Rules box */
+.forum-rules-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+}
+
+.forum-rules-box__title {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.forum-rules-list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.forum-rules-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 12px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.forum-rules-list__item i {
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.forum-rules-link {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1197c0;
+  text-decoration: none;
+  padding-top: 9px;
+  border-top: 1px solid #e2e8f0;
+  transition: opacity 0.15s ease;
+}
+
+.forum-rules-link:hover {
+  opacity: 0.75;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+/* ── 1366px và nhỏ hơn: ẩn sidebar phải ── */
+@media (max-width: 1280px) {
+  :root {
+    --forum-right-w: 240px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .forum-right-sidebar {
+    display: none;
+  }
+}
+
+/* ── Tablet / mobile: ẩn sidebar trái, đơn cột ── */
+@media (max-width: 768px) {
+  .forum-left-sidebar {
+    display: none;
+  }
+
+  .forum-main {
+    padding: 0.875rem 0.75rem;
+  }
+
+  .forum-tabs {
+    gap: 2px;
+  }
+
+  .forum-tab {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ── Màn hình rất nhỏ ── */
+@media (max-width: 480px) {
+  .forum-content-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .forum-btn-post {
+    width: 100%;
+    justify-content: center;
+  }
 }
